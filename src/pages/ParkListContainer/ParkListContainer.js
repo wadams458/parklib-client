@@ -1,6 +1,6 @@
 import React from "react";
 
-function ParkContainer() {
+function ParkListContainer() {
   return (
     <div>
       <h1>ParkList</h1>

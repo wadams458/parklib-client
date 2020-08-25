@@ -1,7 +1,5 @@
-const url = `http://localhost:3001/api/v1`
+const url = `http://localhost:3001/api/v1`;
 
-class GameModel {
+class ParkModel {}
 
-}
-
-export default GameModel
+export default ParkModel;

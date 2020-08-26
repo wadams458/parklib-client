@@ -8,7 +8,7 @@ function ParksList(props) {
     return <Park key={parkObj._id} park={parkObj} list={true} />;
   });
 
-  return <div className="park-container">{ParksList}</div>;
+  return <div className="parks-container">{ParksList}</div>;
 }
 
 export default ParksList;

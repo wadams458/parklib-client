@@ -6,7 +6,7 @@ class ParkListContainer extends React.Component {
   };
   componentDidMount() {
     // Get all Parks
-    fetch("http://localhost:4000/api/v1/parks")
+    fetch("http://localhost:4000/api/v1/parks/")
       .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((err) => console.log(err));

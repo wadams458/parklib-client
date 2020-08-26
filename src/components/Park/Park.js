@@ -1,11 +1,17 @@
 import React from "react";
 
 function Park(props) {
-  console.log("Park Props = ", props);
   return (
     <div>
       <section>
-        <img src={props.park.coverArtUrl} alt={props.park.title} />
+        <img
+          src={props.parkObj.coverArtUrl}
+          alt={props.parkObj.title}
+          height="100"
+        />
+      </section>
+      <section>
+        <h4>props.parkObj.title</h4>
       </section>
     </div>
   );

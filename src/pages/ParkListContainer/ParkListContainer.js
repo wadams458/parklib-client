@@ -2,26 +2,18 @@ import React from "react";
 
 class ParkListContainer extends React.Component {
   state = {
-    showSecret: false,
+    parks: [],
   };
-
-  toggle = () => {
-    this.setState((prevState) => ({
-      showSecret: !prevState.showSecret,
-    }));
-  };
+  componentDidMount() {
+    // Get all Parks
+    fetch("http://localhost:4000/api/v1/parks")
+      .then((response) => response.json())
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+  }
 
   render() {
-    return (
-      <div>
-        <h1>ParkList</h1>
-        <button onClick={this.toggle}>
-          {this.state.showSecret ? "Hide " : "Show "}
-          Secret
-        </button>
-        {this.state.showSecret && <p>This is a secret.</p>}
-      </div>
-    );
+    return <div>ParkList</div>;
   }
 }
 

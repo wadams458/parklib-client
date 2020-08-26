@@ -1,16 +1,14 @@
 import React from "react";
 import Park from "../Park/Park";
 
+import "./ParksList.css";
+
 function ParksList(props) {
   const ParksList = props.parks.map((parkObj) => {
-    return <Park park={parkObj} list />;
+    return <Park key={parkObj._id} park={parkObj} list={true} />;
   });
 
-  return (
-    <div>
-      <ul>{ParksList}</ul>
-    </div>
-  );
+  return <div className="park-container">{ParksList}</div>;
 }
 
 export default ParksList;

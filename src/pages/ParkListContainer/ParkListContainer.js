@@ -1,4 +1,6 @@
 import React from "react";
+import ParksList from "../../components/ParksList/ParksList";
+import ParkModel from "../../models/game";
 
 class ParkListContainer extends React.Component {
   state = {
@@ -6,18 +8,16 @@ class ParkListContainer extends React.Component {
   };
   componentDidMount() {
     // Get all Parks
-    fetch("http://localhost:4000/api/v1/parks/")
-      .then((response) => response.json())
+    ParkModel.getAllParks()
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         this.setState({ parks: result });
       })
       .catch((err) => console.log(err));
   }
 
   render() {
-    console.log("Render ran. State = ", this.state);
-    return <div>ParkList</div>;
+    return <ParksList parks={this.state.parks} />;
   }
 }
 

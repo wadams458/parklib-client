@@ -1,4 +1,6 @@
 import React from "react";
+import "./NewParkContainer.css";
+
 import ParkModel from "../../models/game";
 
 class NewParkContainer extends React.Component {
@@ -49,6 +51,10 @@ class NewParkContainer extends React.Component {
           <div>
             <label htmlFor="">Visited</label>
             <input type="checkbox" name="Visited" />
+          </div>
+          <div>
+            <label htmlFor="">Description</label>
+            <input type="text area" name="Visited" />
           </div>
           <button type="submit">Add Park</button>
         </form>

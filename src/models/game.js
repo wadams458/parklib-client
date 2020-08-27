@@ -16,6 +16,27 @@ class ParkModel {
       body: JSON.stringify(park),
     }).then((response) => response.json());
   };
+
+  static updatePark = (park, id) => {
+    return fetch(`${url}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: localStorage.getItem("token"),
+      },
+      body: JSON.stringify(park),
+    }).then((response) => response.json());
+  };
+
+  static deletePark = (id) => {
+    return fetch(`${url}/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: localStorage.getItem("token"),
+      },
+    }).then((response) => response.json());
+  };
 }
 
 export default ParkModel;

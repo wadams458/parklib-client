@@ -34,7 +34,7 @@ function NavBar({ currentUser, logout }) {
           {currentUser && (
             <React.Fragment>
               <li className="nav-item">
-                <NavLink className="nav-link" exact to="/parks/new">
+                <NavLink className="nav-link" to="/parks/new">
                   Add Park
                 </NavLink>
               </li>

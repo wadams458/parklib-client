@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+// import { withRouter } from "react-router-dom";
 import ParkModel from "../../models/game";
 
 class EditParkContainer extends React.Component {
@@ -29,7 +29,7 @@ class EditParkContainer extends React.Component {
   // Submit updated game object to server to save in database
   handleSubmit = (event) => {
     event.preventDefault();
-    ParkModel.updateGame(this.state, this.props.match.params.id).then(
+    ParkModel.updatePark(this.state, this.props.match.params.id).then(
       (result) => {
         console.log(result);
       }
@@ -89,4 +89,4 @@ class EditParkContainer extends React.Component {
   }
 }
 
-export default withRouter(EditParkContainer);
+export default EditParkContainer;

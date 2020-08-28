@@ -8,11 +8,15 @@ class ParkModel {
     return fetch(`${url}/${parkId}`).then((response) => response.json());
   };
   static createPark = (park) => {
-    return fetch(url, {
-      method: "POST",
+    const config = {
       headers: {
         "Content-Type": "application/json",
+        Authorization: localStorage.getItem("token"),
       },
+    };
+    return fetch(url, {
+      method: "POST",
+      config,
       body: JSON.stringify(park),
     }).then((response) => response.json());
   };

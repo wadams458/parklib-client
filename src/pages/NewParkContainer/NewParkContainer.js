@@ -22,9 +22,9 @@ class NewParkContainer extends React.Component {
     event.preventDefault();
     ParkModel.createPark(this.state).then((result) => {
       console.log(result);
+      this.props.history.push("/parks");
     });
     //redirect to PArk Index(history comes from react -router-dom)
-    this.props.history.push("/parks");
   };
 
   render() {

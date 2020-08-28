@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import ParkModel from "../../models/game";
-import { Button } from 'reactstrap';
+import { Button } from "reactstrap";
 import "./Park.css";
 import Axios from "axios";
 
@@ -15,11 +15,11 @@ class Park extends React.Component {
     });
   }
   onDeleteClick = (id) => {
-    ParkModel.deletePark(this.props.match.params.id)
-  }
+    ParkModel.deletePark(this.props.match.params.id);
+  };
   onEditClick = (id) => {
     // edit code
-  }
+  };
   render() {
     const { park, list } = this.props;
     return (
@@ -44,12 +44,20 @@ class Park extends React.Component {
             )}
           </section>
         </div>
-        <Button className="btn btn-danger btn-circle btn-md"
+        <Button
+          className="btn btn-danger btn-circle btn-md"
           color="danger"
-          onClick={this.onDeleteClick.bind(this, park._id)}>Delete</Button>
-        <Button className="btn btn-circle btn-md ml-4"
+          onClick={this.onDeleteClick.bind(this, park._id)}
+        >
+          Delete
+        </Button>
+        <Button
+          className="btn btn-circle btn-md ml-4"
           color="info"
-          onClick={this.onEditClick.bind(this, park._id)}>Edit</Button>
+          onClick={this.onEditClick.bind(this, park._id)}
+        >
+          Edit
+        </Button>
       </Link>
     );
   }

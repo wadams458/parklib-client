@@ -1,3 +1,5 @@
+import { Router, Redirect } from "react-router-dom";
+
 const url = `http://localhost:4000/api/v1/parks`;
 
 class ParkModel {
@@ -26,7 +28,7 @@ class ParkModel {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": localStorage.getItem("token"),
+        Authorization: localStorage.getItem("token"),
       },
       body: JSON.stringify(park),
     }).then((response) => response.json());
@@ -37,10 +39,9 @@ class ParkModel {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": localStorage.getItem("token"),
       },
     }).then((response) => response.json());
+    // <Redirect to="/parks" />;
   };
 }
-
 export default ParkModel;

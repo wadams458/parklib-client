@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import jwt_decode from "jwt-decode";
-import Routes from './config/routes'
+import Routes from "./config/Routes";
 import NavBar from "./components/NavBar/NavBar";
 import setAuthHeader from "./utils/setAuthHeader";
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import NewParkContainer from '../../pages/NewParkContainer/NewParkContainer';
 
 // function NavBar() {
 //   return (
@@ -34,9 +35,10 @@ function NavBar({ currentUser, logout }) {
           {currentUser && (
             <React.Fragment>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/parks/new">
+                {/* <NavLink className="nav-link" to="/parks/new">
                   Add Park
-                </NavLink>
+                </NavLink> */}
+                <NewParkContainer />
               </li>
               <li className="nav-item">
                 <span onClick={logout} className="nav-link">
